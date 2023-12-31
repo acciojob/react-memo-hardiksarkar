@@ -25,7 +25,7 @@ function addSkillFunc(e){
 }
 
   return (
-    <div>
+    <div id='main'>
       <h1>My Todos</h1>
       <div>
         {
@@ -34,12 +34,12 @@ function addSkillFunc(e){
             })
         }
       </div>
-      <button onClick={()=>setTodo(todo+1)}>Add Todo</button>
-      <div>Count: {count} <button onClick={()=>setCount(count+1)}>+</button></div>
+      <button onClick={()=>setTodo(todo+1)} id='add-todo-btn'>Add Todo</button>
+      <div>Count: {count} <button onClick={()=>setCount(count+1)} id='incr-cnt'>+</button></div>
       <h1>React Memo</h1>
       <form action="" onSubmit={(e)=>addSkillFunc(e)}>
       <input type="text" name="memo" id="memo" onChange={(e)=>setSkill(e.target.value)} value={skill}/>
-      <button type="submit">Add Skill</button>
+      <button type="submit" id='skill-input'>Add Skill</button>
       </form>
       <ul>
         {
